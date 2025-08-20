@@ -1,0 +1,61 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', sans-serif; background: #0f0f1a; color: white; line-height: 1.6; overflow-x: hidden; }
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url("RCCG THE SHELTER.jpg") center/cover no-repeat;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+}
+.hero::after {
+  content: "";
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+.hero-content {
+  position: relative; z-index: 2;
+}
+.hero h1 { font-size: 3rem; letter-spacing: 2px; text-transform: uppercase; }
+.hero p { font-size: 1.2rem; margin: 20px 0; }
+.btn {
+  display: inline-block; padding: 12px 30px;
+  background: linear-gradient(45deg, #ff512f, #dd2476);
+  color: white; text-decoration: none;
+  border-radius: 50px; font-weight: bold;
+  transition: 0.3s;
+}
+.btn:hover { transform: scale(1.1); box-shadow: 0 0 15px #dd2476; }
+
+/* Sections */
+section { padding: 80px 20px; text-align: center; }
+h2 { font-size: 2rem; margin-bottom: 20px; }
+
+/* Event Cards */
+.event-cards {
+  display: grid; gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 30px;
+}
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px; border-radius: 12px;
+  transition: 0.3s;
+}
+.card:hover { background: rgba(255,255,255,0.15); transform: translateY(-5px); }
+
+/* Countdown */
+.timer {
+  font-size: 2rem; font-weight: bold;
+  margin-top: 20px;
+  color: #ffcc70;
+}
+
+/* Animations */
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 1s, transform 1s; }
+.fade-in.show { opacity: 1; transform: translateY(0); }
+
+/* Footer */
+footer { background: #111; text-align: center; padding: 20px; font-size: 0.9rem; color: #aaa; }
